@@ -1,5 +1,3 @@
-*This project is not maintained anymore*
-
 A [maven](http://maven.apache.org/) plugin to generate UML diagrams using [PlantUML](http://plantuml.sourceforge.net/) syntax.
 
 # Important note
@@ -15,14 +13,14 @@ To generate images from PlantUML description add following dependency to your po
 <build>
   <plugins>
     <plugin>
-      <groupId>com.github.jeluard</groupId>
+      <groupId>net.sourceforge.plantuml</groupId>
       <artifactId>plantuml-maven-plugin</artifactId>
-      <version>1.2</version>
+      <version>1.2021.1</version>
       <configuration>
         <sourceFiles>
           <directory>${basedir}</directory>
           <includes>
-            <include>src/main/plantuml/**/*.txt</include>
+            <include>src/main/plantuml/**/*.wsd</include>
           </includes>
         </sourceFiles>
       </configuration>
@@ -30,7 +28,7 @@ To generate images from PlantUML description add following dependency to your po
         <dependency>
           <groupId>net.sourceforge.plantuml</groupId>
           <artifactId>plantuml</artifactId>
-          <version>7999</version>
+          <version>1.2021.1</version>
         </dependency>
       </dependencies>
     </plugin>
@@ -38,12 +36,12 @@ To generate images from PlantUML description add following dependency to your po
 </build>
 ```
 
-Note that you must explicitely define the PlantUML version you want to use.
+Note that you must explicitly define the PlantUML version you want to use.
 
 Then execute command:
 
 ```
-mvn clean com.github.jeluard:plantuml-maven-plugin:generate
+mvn clean net.sourceforge.plantuml:plantuml-maven-plugin:generate
 ```
 
 # Extra configuration options
@@ -55,6 +53,8 @@ mvn clean com.github.jeluard:plantuml-maven-plugin:generate
 `format` Output format. Defaults to `png`.
 
 `verbose` Wether or not to output details during generation. Defaults to `false`.
+
+`preproc` Generate the preprocessed files .
 
 
 Released under [Apache 2 license](http://www.apache.org/licenses/LICENSE-2.0.html).
