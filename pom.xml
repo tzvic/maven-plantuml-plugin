@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
+  <groupId>net.sourceforge.plantuml</groupId>
   <artifactId>plantuml-maven-plugin</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.2021.1</version>
   <packaging>maven-plugin</packaging>
 
   <name>Maven PlantUML plugin</name>
-  <inceptionYear>2011</inceptionYear>
+  <inceptionYear>2021</inceptionYear>
   <description>
     A maven plugin to generate UML diagrams using PlantUML syntax
   </description>
 
-  <parent>
-    <groupId>com.github.jeluard</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>9</version>
-  </parent>
 
   <properties>
-    <javaAnimalSniffer.version>17</javaAnimalSniffer.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>net.sourceforge.plantuml</groupId>
       <artifactId>plantuml</artifactId>
-      <version>8031</version>
+      <version>1.2021.1</version>
     </dependency>
     <dependency>
       <groupId>org.apache.maven</groupId>
@@ -45,25 +41,11 @@
     </dependency>
   </dependencies>
 
-  <developers>
-    <developer>
-      <id>jeluard</id>
-      <name>Julien Eluard</name>
-    </developer>
-    <developer>
-      <id>vanuan</id>
-      <name>John Yani</name>
-    </developer>
-    <developer>
-      <id>matling</id>
-      <name>Mattias Lingdell</name>
-    </developer>
-  </developers>
 
   <scm>
-    <connection>scm:git:git@github.com:jeluard/maven-plantuml-plugin</connection>
-    <developerConnection>scm:git:git@github.com:jeluard/maven-plantuml-plugin</developerConnection>
-    <url>scm:git:git@github.com:jeluard/maven-plantuml-plugin</url>
+    <connection>scm:git:git@github.com:tzviv/maven-plantuml-plugin</connection>
+    <developerConnection>scm:git:git@github.com:tzvic/maven-plantuml-plugin</developerConnection>
+    <url>scm:git:git@github.com:tzvic/maven-plantuml-plugin</url>
     <tag>HEAD</tag>
   </scm>
 
